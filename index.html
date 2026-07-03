@@ -40,9 +40,22 @@
     </header>
 
     <main class="page">
-      <section class="ad-slot" aria-label="Advertisement">
-        <p>Adsterra ad placement</p>
-        <span>Paste your ad script here later.</span>
+      <section class="monetization-panel" aria-label="Sponsored link">
+        <div>
+          <span class="sponsored-label">Sponsored</span>
+          <h2>Discover today's featured content</h2>
+          <p>Open the latest recommended link from Chatpati Duniya.</p>
+        </div>
+        <!-- SMARTLINK: replace this href with your Adsterra Smartlink URL. -->
+        <a
+          id="smartlinkCta"
+          class="smartlink-cta"
+          href="https://www.effectivecpmnetwork.com/t0m145b9yu?key=ac68ab4a64ab8250d289874d21b65980"
+          target="_blank"
+          rel="sponsored noopener noreferrer"
+        >
+          Explore now
+        </a>
       </section>
 
       <section class="video-section" aria-labelledby="latestVideosHeading">
@@ -51,11 +64,34 @@
           <p>Fresh clips and trending links in one place.</p>
         </div>
 
+        <aside id="nativeBanner" class="ad-slot native-banner" aria-label="Advertisement">
+          <!-- NATIVE BANNER START
+            Paste the complete Adsterra native banner code below this comment.
+            Keep it inside #nativeBanner so it stays responsive.
+          -->
+          <div class="ad-placeholder" data-remove-when-ad-is-added>
+            <p>Native advertisement</p>
+            <span>Your Adsterra native banner will appear here.</span>
+          </div>
+          <!-- NATIVE BANNER END -->
+        </aside>
+
         <div id="videoGrid" class="video-grid" aria-live="polite"></div>
         <p id="emptyState" class="empty-state" hidden>No videos found.</p>
       </section>
     </main>
 
     <script src="script.js"></script>
+
+    <!-- POPUNDER START
+      Paste the complete Adsterra popunder script directly below this comment.
+      One popunder placement is enough; adding duplicates can hurt user retention.
+    -->
+    <!-- POPUNDER END -->
+
+    <!-- SOCIAL BAR START
+      Paste the complete Adsterra social bar script directly below this comment.
+    -->
+    <!-- SOCIAL BAR END -->
   </body>
 </html>
