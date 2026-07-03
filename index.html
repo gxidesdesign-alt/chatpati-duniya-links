@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatpati Duniya Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand" aria-label="Chatpati Duniya Links home">
+        <img
+          class="brand-logo"
+          src="assets/logo.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <span>Chatpati Duniya Links</span>
+      </div>
+
+      <form class="search-shell" role="search">
+        <label class="sr-only" for="searchInput">Search videos</label>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search videos"
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          <span aria-hidden="true">⌕</span>
+        </button>
+      </form>
+    </header>
+
+    <main class="page">
+      <section class="ad-slot" aria-label="Advertisement">
+        <p>Adsterra ad placement</p>
+        <span>Paste your ad script here later.</span>
+      </section>
+
+      <section class="video-section" aria-labelledby="latestVideosHeading">
+        <div class="section-heading">
+          <h1 id="latestVideosHeading">Latest Videos</h1>
+          <p>Fresh clips and trending links in one place.</p>
+        </div>
+
+        <div id="videoGrid" class="video-grid" aria-live="polite"></div>
+        <p id="emptyState" class="empty-state" hidden>No videos found.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
