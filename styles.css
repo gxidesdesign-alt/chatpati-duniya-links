@@ -11,7 +11,7 @@
   --accent-dark: #99170f;
   --gold: #f2a233;
   --focus: #f2a233;
-  --shadow: 0 16px 34px rgba(0, 0, 0, 0.38);
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -20,10 +20,7 @@
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 18% 0%, rgba(230, 56, 38, 0.18), transparent 30%),
-    radial-gradient(circle at 88% 10%, rgba(242, 162, 51, 0.12), transparent 24%),
-    linear-gradient(180deg, #090303 0%, var(--bg) 36%, #030202 100%);
+  background: var(--bg);
   color: var(--text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -73,7 +70,6 @@ input {
   font-weight: 800;
   line-height: 1.1;
   color: var(--text);
-  text-shadow: 0 0 18px rgba(230, 56, 38, 0.24);
 }
 
 .brand-logo {
@@ -84,9 +80,7 @@ input {
   border: 1px solid rgba(242, 162, 51, 0.42);
   border-radius: 50%;
   background: #000;
-  box-shadow:
-    0 0 0 3px rgba(230, 56, 38, 0.12),
-    0 10px 22px rgba(230, 56, 38, 0.22);
+  box-shadow: none;
   object-fit: contain;
 }
 
@@ -149,10 +143,7 @@ input {
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: clamp(18px, 3vw, 28px);
-  background:
-    radial-gradient(circle at 90% 20%, rgba(242, 162, 51, 0.18), transparent 32%),
-    linear-gradient(135deg, rgba(230, 56, 38, 0.19), rgba(36, 16, 14, 0.94));
-  box-shadow: var(--shadow);
+  background: var(--surface);
 }
 
 .sponsored-label {
@@ -180,11 +171,11 @@ input {
   flex: 0 0 auto;
   border-radius: 999px;
   padding: 12px 20px;
-  background: linear-gradient(135deg, var(--accent), #ff6a32);
+  background: var(--accent);
   color: #fff;
   font-weight: 800;
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(230, 56, 38, 0.3);
+  box-shadow: none;
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
@@ -205,11 +196,9 @@ input {
   margin-bottom: 28px;
   border: 1px dashed #b9b6ad;
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(230, 56, 38, 0.18), rgba(242, 162, 51, 0.12)),
-    var(--surface);
+  background: var(--surface);
   text-align: center;
-  box-shadow: inset 0 0 30px rgba(230, 56, 38, 0.06);
+  box-shadow: none;
 }
 
 .native-banner {
@@ -296,6 +285,63 @@ input {
 
 .video-card:active .thumbnail {
   transform: scale(0.985);
+}
+
+.sponsored-card {
+  display: grid;
+  align-self: start;
+  min-width: 0;
+  color: var(--text);
+  text-decoration: none;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 220px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.sponsored-visual {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid rgba(242, 162, 51, 0.55);
+  border-radius: 8px;
+  padding: clamp(12px, 2vw, 20px);
+  background: #21130e;
+}
+
+.sponsored-card-label {
+  border: 1px solid rgba(242, 162, 51, 0.65);
+  border-radius: 3px;
+  padding: 3px 6px;
+  color: var(--gold);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sponsored-visual strong {
+  font-size: 1rem;
+}
+
+.sponsored-card-action {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.sponsored-card:hover .sponsored-visual,
+.sponsored-card:focus-visible .sponsored-visual {
+  border-color: var(--gold);
+  background: #291710;
+}
+
+.sponsored-card:focus-visible {
+  border-radius: 8px;
+  outline: 3px solid rgba(242, 162, 51, 0.3);
+  outline-offset: 4px;
 }
 
 .duration {
@@ -416,6 +462,20 @@ input {
 
   .thumbnail {
     border-radius: 7px;
+  }
+
+  .sponsored-visual {
+    gap: 6px;
+    border-radius: 7px;
+    padding: 10px;
+  }
+
+  .sponsored-visual strong {
+    font-size: 0.82rem;
+  }
+
+  .sponsored-card-action {
+    font-size: 0.7rem;
   }
 
   .video-copy {
