@@ -6,7 +6,7 @@ const videos = Array.from({ length: 50 }, (_, index) => {
 
   return {
     title: `Video slot ${slotNumber} - add title later`,
-    thumbnail: `assets/thumbnails/video-${slotNumber}.jpg`,
+    thumbnail: `assets/thumbnails/video-${slotNumber}.webp`,
     channel: "Chatpati Duniya",
     meta: "Description will be added later",
     duration: "--:--",
