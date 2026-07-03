@@ -3,12 +3,14 @@ const DEFAULT_REDIRECT_URL =
 
 const videos = Array.from({ length: 50 }, (_, index) => {
   const slotNumber = index + 1;
+  const views = 300 + ((slotNumber * 37) % 201);
+  const likes = 20 + ((slotNumber * 23) % 81);
 
   return {
     title: `Video slot ${slotNumber} - add title later`,
     thumbnail: `assets/thumbnails/video-${slotNumber}.webp`,
     channel: "Chatpati Duniya",
-    meta: "Description will be added later",
+    meta: `${views}K views • ${likes}K likes`,
     duration: "--:--",
     url: DEFAULT_REDIRECT_URL,
   };
@@ -28,17 +30,10 @@ function createVideoCard(video) {
   const thumbnail = document.createElement("div");
   thumbnail.className = "thumbnail";
 
-  const fallback = document.createElement("div");
-  fallback.className = "thumbnail-fallback";
-  fallback.textContent = "Drop thumbnail image here";
-
   const image = document.createElement("img");
   image.src = video.thumbnail;
   image.alt = "";
   image.loading = "lazy";
-  image.addEventListener("load", () => {
-    fallback.hidden = true;
-  });
   image.addEventListener("error", () => {
     image.remove();
   });
@@ -47,7 +42,7 @@ function createVideoCard(video) {
   duration.className = "duration";
   duration.textContent = video.duration;
 
-  thumbnail.append(fallback, image, duration);
+  thumbnail.append(image, duration);
 
   const copy = document.createElement("div");
   copy.className = "video-copy";
