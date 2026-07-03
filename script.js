@@ -131,44 +131,8 @@ function createVideoCard(video, index) {
   return card;
 }
 
-function createSponsoredCard() {
-  const card = document.createElement("a");
-  card.className = "sponsored-card";
-  card.href = DEFAULT_REDIRECT_URL;
-  card.target = "_blank";
-  card.rel = "sponsored noopener noreferrer";
-  card.setAttribute("aria-label", "Open sponsored link");
-
-  const visual = document.createElement("div");
-  visual.className = "sponsored-visual";
-
-  const label = document.createElement("span");
-  label.className = "sponsored-card-label";
-  label.textContent = "Advertisement";
-
-  const message = document.createElement("strong");
-  message.textContent = "Featured sponsor";
-
-  const action = document.createElement("span");
-  action.className = "sponsored-card-action";
-  action.textContent = "Visit sponsor ↗";
-
-  visual.append(label, message, action);
-  card.append(visual);
-  return card;
-}
-
 function renderVideos(list) {
-  const cards = [];
-
-  list.forEach((video, index) => {
-    cards.push(createVideoCard(video, index));
-    if ((index + 1) % 10 === 0 && index < list.length - 1) {
-      cards.push(createSponsoredCard());
-    }
-  });
-
-  videoGrid.replaceChildren(...cards);
+  videoGrid.replaceChildren(...list.map(createVideoCard));
   emptyState.hidden = list.length > 0;
 }
 
