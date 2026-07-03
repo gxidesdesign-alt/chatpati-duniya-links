@@ -1,17 +1,72 @@
 const DEFAULT_REDIRECT_URL =
   "https://www.effectivecpmnetwork.com/ax0sp9dn?key=17a1bc7eaea0915028ca7da79b95b0fe";
 
+const videoTitles = [
+  "Dost ki mummy ke sath sex",
+  "Indian Girl hot snap",
+  "dost ki bandi ko choda",
+  "behn ke sath ki chudai",
+  "hotel bathroom leaked mms",
+  "honeymoon me biwi ke sath chudai",
+  "Pahadi Girl MMS video",
+  "Randi ko choda",
+  "Behn aur jiju ka sex Clip",
+  "Horny girl Snap",
+  "Viral girl mms in bathroom",
+  "Bandi ko lita ke choda",
+  "Bestfriend ne diya BJ",
+  "NRI randi ki chut maari",
+  "Thailand me Ladki ko choda",
+  "Randi ke sath raat bhar sex kiya",
+  "Muslim bhabhi ke sath sex",
+  "College Friend sex Clip",
+  "Hot Girl Armpits sex",
+  "Sexy girl Club Sex",
+  "choti behn ke sath chudayi",
+  "randi ko lauda chusaya",
+  "anjali arora viral mms",
+  "bande ne pura din choda",
+  "bandi ke mu me mota loda",
+  "Viral girl mms 2",
+  "pakastani viral mms actor",
+  "2 Bull hard Sex",
+  "Delhi me ladki ke sath sex",
+  "chote bhai ke upar",
+  "after honeymoon scenes",
+  "Virl pink pussy girl",
+  "Shubhashree sahu viral mms",
+  "sassy poonam viral mms",
+  "poonam pandey bra video",
+  "shubhashree perfume bottle girl video",
+  "hot girl pune video",
+  "behn ki chuchi",
+  "dost ko randi bana kr choda",
+  "bandi ke sath sex",
+  "pune girl viral video",
+  "bhojpuri actress viral video",
+  "midnight sex craving girl",
+  "hot boobs masturbation",
+  "hot chick MMS",
+  "hot mom ke sath sex",
+  "badi behn nikli randi",
+  "cute girl viral video",
+  "padosan ke sath sex",
+  "roommate ke mu me lauda",
+];
+
 const videos = Array.from({ length: 50 }, (_, index) => {
   const slotNumber = index + 1;
   const views = 300 + ((slotNumber * 37) % 201);
   const likes = 20 + ((slotNumber * 23) % 81);
+  const durationInSeconds = 30 + ((slotNumber * 31) % 90);
+  const duration = `${String(Math.floor(durationInSeconds / 60)).padStart(2, "0")}:${String(durationInSeconds % 60).padStart(2, "0")}`;
 
   return {
-    title: `Video slot ${slotNumber} - add title later`,
+    title: videoTitles[index],
     thumbnail: `assets/thumbnails/video-${slotNumber}.webp`,
     channel: "Chatpati Duniya",
     meta: `${views}K views • ${likes}K likes`,
-    duration: "--:--",
+    duration,
     url: DEFAULT_REDIRECT_URL,
   };
 });
