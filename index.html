@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260703-2" />
+    <link rel="stylesheet" href="styles.css?v=20260703-3" />
   </head>
   <body>
     <header class="site-header">
@@ -57,12 +57,102 @@
           <h1 id="latestVideosHeading">Latest Videos</h1>
         </div>
 
-        <div id="videoGrid" class="video-grid" aria-live="polite"></div>
+        <div id="videoFeed" aria-live="polite">
+          <div class="video-grid" data-video-grid></div>
+
+          <aside class="infeed-ad horizontal-ad desktop-banner" aria-label="Advertisement">
+            <script>
+              atOptions = {
+                key: "bf9c44168b580d8de273cb6c74f516a6",
+                format: "iframe",
+                height: 90,
+                width: 728,
+                params: {},
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/bf9c44168b580d8de273cb6c74f516a6/invoke.js"></script>
+          </aside>
+
+          <aside class="infeed-ad horizontal-ad mobile-banner" aria-label="Advertisement">
+            <script>
+              atOptions = {
+                key: "e644accf91ddf5948b624d0a81cdb09a",
+                format: "iframe",
+                height: 50,
+                width: 320,
+                params: {},
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/e644accf91ddf5948b624d0a81cdb09a/invoke.js"></script>
+          </aside>
+
+          <div class="video-grid" data-video-grid></div>
+
+          <aside class="infeed-ad horizontal-ad tablet-banner" aria-label="Advertisement">
+            <script>
+              atOptions = {
+                key: "9fa63d500b5f8c6f9650b868f50f1ce0",
+                format: "iframe",
+                height: 60,
+                width: 468,
+                params: {},
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/9fa63d500b5f8c6f9650b868f50f1ce0/invoke.js"></script>
+          </aside>
+
+          <div class="video-grid" data-video-grid></div>
+
+          <aside class="infeed-ad rectangle-ad" aria-label="Advertisement">
+            <script>
+              atOptions = {
+                key: "00d1442bf12427643d7a19a12502e588",
+                format: "iframe",
+                height: 250,
+                width: 300,
+                params: {},
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/00d1442bf12427643d7a19a12502e588/invoke.js"></script>
+          </aside>
+
+          <div class="video-grid" data-video-grid></div>
+
+          <div class="tower-ad-row" aria-label="Advertisements">
+            <aside class="infeed-ad tower-ad">
+              <script>
+                atOptions = {
+                  key: "addf8a14a821db0641ddb464325b7300",
+                  format: "iframe",
+                  height: 300,
+                  width: 160,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/addf8a14a821db0641ddb464325b7300/invoke.js"></script>
+            </aside>
+
+            <aside class="infeed-ad tower-ad tall-tower-ad">
+              <script>
+                atOptions = {
+                  key: "b5bac7b91b0950248789c8a7c3b96d8a",
+                  format: "iframe",
+                  height: 600,
+                  width: 160,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/b5bac7b91b0950248789c8a7c3b96d8a/invoke.js"></script>
+            </aside>
+          </div>
+
+          <div class="video-grid" data-video-grid></div>
+        </div>
         <p id="emptyState" class="empty-state" hidden>No videos found.</p>
       </section>
     </main>
 
-    <script src="script.js?v=20260703-6"></script>
+    <script src="script.js?v=20260703-7"></script>
 
     <!-- POPUNDER START
       One popunder placement is enough; adding duplicates can hurt user retention.

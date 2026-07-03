@@ -71,7 +71,7 @@ const videos = Array.from({ length: 50 }, (_, index) => {
   };
 });
 
-const videoGrid = document.querySelector("#videoGrid");
+const videoGrids = [...document.querySelectorAll("[data-video-grid]")];
 const emptyState = document.querySelector("#emptyState");
 const searchForm = document.querySelector(".search-shell");
 const searchInput = document.querySelector("#searchInput");
@@ -132,7 +132,13 @@ function createVideoCard(video, index) {
 }
 
 function renderVideos(list) {
-  videoGrid.replaceChildren(...list.map(createVideoCard));
+  videoGrids.forEach((grid, gridIndex) => {
+    const start = gridIndex * 10;
+    const group = list.slice(start, start + 10);
+    grid.replaceChildren(
+      ...group.map((video, index) => createVideoCard(video, start + index)),
+    );
+  });
   emptyState.hidden = list.length > 0;
 }
 
