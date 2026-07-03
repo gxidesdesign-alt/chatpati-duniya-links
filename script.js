@@ -76,7 +76,7 @@ const emptyState = document.querySelector("#emptyState");
 const searchForm = document.querySelector(".search-shell");
 const searchInput = document.querySelector("#searchInput");
 
-function createVideoCard(video) {
+function createVideoCard(video, index) {
   const card = document.createElement("button");
   card.className = "video-card";
   card.type = "button";
@@ -87,8 +87,12 @@ function createVideoCard(video) {
 
   const image = document.createElement("img");
   image.src = video.thumbnail;
-  image.alt = "";
-  image.loading = "lazy";
+  image.alt = `${video.title} thumbnail`;
+  image.width = 1600;
+  image.height = 900;
+  image.decoding = "async";
+  image.loading = index < 4 ? "eager" : "lazy";
+  if (index === 0) image.fetchPriority = "high";
   image.addEventListener("error", () => {
     image.remove();
   });
