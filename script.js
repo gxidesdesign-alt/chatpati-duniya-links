@@ -1,5 +1,5 @@
 const DEFAULT_REDIRECT_URL =
-  "https://www.effectivecpmnetwork.com/ax0sp9dn?key=17a1bc7eaea0915028ca7da79b95b0fe";
+  "https://www.effectivecpmnetwork.com/t0m145b9yu?key=ac68ab4a64ab8250d289874d21b65980";
 
 const videoTitles = [
   "Dost ki mummy ke sath sex",
